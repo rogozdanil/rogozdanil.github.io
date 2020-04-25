@@ -1,6 +1,8 @@
+
 function setDataToServer() {
-    const file = document.getElementById('doc').files[0];
+    const file = document.getElementById('humanDoc').files[0];
     const uploadTask = firebase.storage().ref('fullData/' + file.name).put(file);
+    
 
 uploadTask.on(firebase.storage.TaskEvent.STATE_CHANGED, 
   function(snapshot) {
@@ -34,12 +36,12 @@ uploadTask.on(firebase.storage.TaskEvent.STATE_CHANGED,
     }, function() {
         uploadTask.snapshot.ref.getDownloadURL().then(function(downloadURL) {
             firebase.database().ref('fullData/').push({
-                Surname: surname.value,
-                Name: name.value,
-                Patronymic: patronymic.value,
-                Phone: phone.value,
-                Email: email.value,
-                DocumentPhoto: documentPhotoURL
+                Surname: humanSurname.value,
+                Name: humanName.value,
+                Patronymic: humanPatronymic.value,
+                Phone: humanPhone.value,
+                Email: humanEmail.value,
+                DocumentPhoto: downloadURL
             }, function(error) {
                 if (error) {
                     alert("Систему не обманишь! Загрузи документ удостоверяющий личность!!!")
@@ -47,7 +49,7 @@ uploadTask.on(firebase.storage.TaskEvent.STATE_CHANGED,
                     alert("Не самая твоя лучшая фотка, но пойдёт")
                 }
              });
-            console.log('File available at', photoURL);
+            console.log('File available at', downloadURL);
         });
     });    
 }

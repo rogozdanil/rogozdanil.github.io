@@ -5,11 +5,11 @@
         <title>Razreshenie_na_dihanie</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styles.css">
-        <script src="https://kit.fontawesome.com/cded72ced7.js" crossorigin="anonymous"></script>
         <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-app.js"></script>
         <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-database.js"></script>
         <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-storage.js"></script>
         <script src="app.js"></script>
+        <script type="text/javascript" src="script.js"></script>
     </head>
     <body>
         <div class="header">
@@ -18,22 +18,22 @@
         <div class="Main">
             <form class="Form" onsubmit="setDataToServer(); return false;">
                 
-                <input class="fillForm" id="surname" required type="text" pattern="[A-Za-zА-Яа-я]+" maxlength="50" placeholder="Обязательно к заполнению">
+                <input class="fillForm" id="humanSurname" required type="text" pattern="[A-Za-zА-Яа-я]+" maxlength="50" placeholder="Обязательно к заполнению">
                 <div class="fillFormInformation">Введите фамилию человека, который хочет дышать!!!</div>
     
-                <input class="fillForm" id="name" required type="text" pattern="[A-Za-zА-Яа-я]+" maxlength="50" placeholder="Обязательно к заполнению">
+                <input class="fillForm" id="humanName" required type="text" pattern="[A-Za-zА-Яа-я]+" maxlength="50" placeholder="Обязательно к заполнению">
                 <div class="fillFormInformation">Введите имя человека, который хочет дышать!!!</div>
 
-                <input class="fillForm" id="patronymic" type="text" value="" pattern="[A-Za-zА-Яа-я]+" maxlength="50">
+                <input class="fillForm" id="humanPatronymic" type="text" value="" pattern="[A-Za-zА-Яа-я]+" maxlength="50">
                 <div class="fillFormInformation">Если есть отчество, можно и его написать</div>
     
-                <input class="fillForm" id="phone_input" required type="text" pattern="[0-9]{11}" placeholder="Обязательно к заполнению">
+                <input class="fillForm" id="humanPhone" required type="text" pattern="[0-9]{11}" placeholder="Обязательно к заполнению">
                 <div class="fillFormInformation">Введите телефон, начиная с 8. Нам же нужно как-то прослушивать вас</div>
 
-                <input class="fillForm" id="email" required type="email" placeholder="Обязательно к заполнению">
+                <input class="fillForm" id="humanEmail" required type="email" placeholder="Обязательно к заполнению">
                 <div class="fillFormInformation">Введите почту, иначе кто будет получать сообщения от "Активный гражданин"</div>
 
-                <input class="DocumentPhoto" id="doc" required type="file">
+                <input class="DocumentPhoto" id="humanDoc" required type="file">
                 <label for="doc">Нужен документ удостоверяющий вашу личность)</label>
                 <button class="documentButton" id="docButton" type="submit">Получить разрешение</button>
             </form>
