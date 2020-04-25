@@ -1,0 +1,70 @@
+body{
+    background-position: center;
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 50px;
+    margin: 50px;
+    margin-top: 50px;
+    border-bottom: 1px solid rgb(180, 178, 178);
+    font-family: sans-serif;
+    
+}
+.headerText{
+    font-size: 200%;
+    
+}
+
+.Main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 600px;
+    max-width: 600px;
+    margin: 10px auto;
+    font-family: sans-serif;
+   
+}
+.Form{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    max-width: 400px;
+    
+}
+.fillForm{
+    margin: 5% 0 0;
+    height: 25px;
+    font-size: 20px;
+    border-radius: 10px;
+    font-family: sans-serif;
+    margin-top: 15px;
+
+    
+}
+
+input[type=text]:focus{
+    outline:none;
+    border: 2px solid rgb(48, 243, 9);
+}
+
+.fillFormInformation{
+    margin-top: 5px;
+    border-bottom: 1px solid rgb(180, 178, 178);
+    padding-bottom: 15px;
+}
+
+.documentButton{
+    margin-top: 10px;
+    font-size: 30px;
+    border-radius: 8px;
+    padding: 1px 30px;
+}
+
+.DocumentPhoto{
+    margin-top: 10px;
+    font-size: 15px;
+    padding: 2px 80px;
+}
